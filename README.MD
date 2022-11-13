@@ -1,4 +1,3 @@
-#README
 ##GENERAL INFO
 An application used to download the github repository along with commits
 
