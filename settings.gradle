@@ -1,0 +1,43 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+    versionCatalogs {
+        create("libs") {
+            version('retrofitVersion', '2.9.0')
+            version('gsonVersion', '2.9.0')
+            version('okHttpVersion', '4.10.0')
+            version('coroutinesVersion', '1.6.4')
+            version('mockkVersion', '1.13.2')
+            version('roomVersion', '2.4.3')
+            version('hiltVersion', '2.44')
+            library('retrofitClient', 'com.squareup.retrofit2', 'retrofit').versionRef('retrofitVersion')
+            library('retrofitGson', 'com.squareup.retrofit2', 'converter-gson').versionRef('retrofitVersion')
+            library('gson', 'com.google.code.gson', 'gson').versionRef('gsonVersion')
+            library('okhttpLogInterceptor', 'com.squareup.okhttp3', 'logging-interceptor').versionRef('okHttpVersion')
+            library('coroutinesCore', 'org.jetbrains.kotlinx', 'kotlinx-coroutines-core').versionRef('coroutinesVersion')
+            library('coroutinesAndroid', 'org.jetbrains.kotlinx', 'kotlinx-coroutines-android').versionRef('coroutinesVersion')
+            library('coroutinesTest', 'org.jetbrains.kotlinx', 'kotlinx-coroutines-test').versionRef('coroutinesVersion')
+            library('mockkAndroid', 'io.mockk', 'mockk-android').versionRef('mockkVersion')
+            library('mockkAgent', 'io.mockk', 'mockk-agent').versionRef('mockkVersion')
+            library('room', 'androidx.room', 'room-runtime').versionRef('roomVersion')
+            library('roomKtx', 'androidx.room', 'room-ktx').versionRef('roomVersion')
+            library('roomCompiler', 'androidx.room', 'room-compiler').versionRef('roomVersion')
+            library('hiltAndroid', 'com.google.dagger', 'hilt-android').versionRef('hiltVersion')
+            library('hiltCompiler', 'com.google.dagger', 'hilt-compiler').versionRef('hiltVersion')
+        }
+    }
+}
+rootProject.name = "github commits"
+include ":app"
+include ':data'
+include ':domain'

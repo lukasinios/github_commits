@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">github commits</string>
+    <string name="loading_history_error">Failed to load history</string>
+    <string name="incorrect_owner_repo_format">Incorrect format of the entered data.\nShould be {owner}/{repository}</string>
+    <string name="fetching_repository_error">Failed to download repository</string>
+    <string name="fetching_commits_error">Failed to download commits</string>
+    <string name="sha">sha: %s</string>
+    <string name="message">message: %s</string>
+    <string name="author">author: %s</string>
+    <string name="repository_id">repository id: %s</string>
+    <string name="send">send</string>
+    <string name="select_commit">At least one commit must be selected</string>
+</resources>
